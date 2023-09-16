@@ -3,8 +3,8 @@
 (defun isPal (lst) (if (equal lst (rev lst)) T nil)); check palindrom
 
 (defun findPal (lst &optional (res ())) (if (= (length lst) 2) (if (isPal lst) (append res (list lst))) 
-															   (if (isPal lst) (append res (list lst) (findPal (cdr lst) res) (findPal (cdr (rev lst)) res))
-															                   (append res (findPal (cdr lst) res) (findPal (cdr (rev lst)) res))))); find palindrom-part with repetere
+							       (if (isPal lst) (append res (list lst) (findPal (cdr lst) res) (findPal (cdr (rev lst)) res))
+									       (append res (findPal (cdr lst) res) (findPal (cdr (rev lst)) res))))); find palindrom-part with repetere
 
 (defun in (lst el) (if (null lst) nil (if (equal el (car lst)) T (in (cdr lst) el)))); check el in lst
 

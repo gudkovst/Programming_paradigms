@@ -4,7 +4,7 @@
 
 (defun findPal (lst) (if (= (length lst) 2) (if (isPal lst) (list lst)) 
 		     (if (isPal lst) (append (list lst) (findPal (cdr lst)) (findPal (cdr (rev lst))))
-		     (append (findPal (cdr lst)) (findPal (cdr (rev lst))))))); find palindrom-part with repetere
+		                     (append (findPal (cdr lst)) (findPal (cdr (rev lst))))))); find palindrom-part with repetere
 
 (defun in (lst el) (if (null lst) nil (if (equal el (car lst)) T (in (cdr lst) el)))); check el in lst
 

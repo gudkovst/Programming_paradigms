@@ -46,7 +46,7 @@
 				   ((atom (car lst)) (append (list (car lst)) (delLinearSubpal (cdr lst))))
 				   ((not (isLinearList (car lst))) (append (list (delLinearSubpal (car lst))) (delLinearSubpal (cdr lst))))
 				   ((isPal (car lst)) (delLinearSubpal (cdr lst)))
-				   (T (append (list (car lst)) (delAllSubpal (cdr lst)))))); delete linear sublist-palindrom
+				   (T (append (list (car lst)) (delLinearSubpal (cdr lst)))))); delete linear sublist-palindrom
 
 (defun delAllSubpal (lst) (cond ((null lst) ())
 				((atom (car lst)) (append (list (car lst)) (delAllSubpal (cdr lst))))
